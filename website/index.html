@@ -133,29 +133,6 @@
         <div><b>00</b><span>Konten, Anmeldungen oder Cloud</span></div>
       </section>
 
-      <section class="ds-section ds-film" id="film">
-        <div class="ds-section-head">
-          <span>Film</span>
-          <h2>Pivolo in 27 Sekunden</h2>
-        </div>
-        <figure class="ds-figure">
-          <video
-            class="ds-film-video"
-            controls
-            playsinline
-            preload="metadata"
-            width="1920"
-            height="1080"
-            poster="video/pivolo-clip-poster.jpg"
-            aria-label="Kurzfilm: Pivolo nimmt einen Bereich auf, markiert ihn und gibt ihn weiter"
-          >
-            <source src="video/pivolo-clip.mp4" type="video/mp4" />
-            Dein Browser kann das Video nicht abspielen.
-            <a href="video/pivolo-clip.mp4">Video als MP4 laden</a>.
-          </video>
-        </figure>
-      </section>
-
       <section class="ds-section" id="funktionen">
         <div class="ds-section-head">
           <span>01</span>
@@ -175,6 +152,11 @@
               ist ein scharfes MP4 in Retina-Auflösung. Rahmen und Leiste
               bleiben aus dem Video. Ab macOS 15 und unter Windows 10/11.
             </p>
+            <div class="ds-frag" aria-hidden="true">
+              <span class="ds-rec"
+                ><span class="ds-rec-dot"></span>Aufnahme · 00:12</span
+              >
+            </div>
           </div>
           <div class="ds-feature">
             <b>02</b>
@@ -209,6 +191,10 @@
               Zähler setzen sich von selbst fort: 1, 2, 3. Dazu Spotlight, das
               alles außer dem Wichtigen abdunkelt, und ein Textmarker.
             </p>
+            <div class="ds-frag" aria-hidden="true">
+              <span class="ds-chip">1</span><span class="ds-chip">2</span
+              ><span class="ds-chip">3</span>
+            </div>
           </div>
           <div class="ds-feature">
             <b>06</b>
@@ -272,6 +258,28 @@
         </div>
       </section>
 
+      <section class="ds-section ds-film" id="film">
+        <div class="ds-section-head">
+          <span>Film</span>
+          <h2>Pivolo in 27 Sekunden</h2>
+        </div>
+        <figure class="ds-figure">
+          <video
+            class="ds-film-video"
+            controls
+            playsinline
+            preload="metadata"
+            width="1920"
+            height="1080"
+            poster="video/pivolo-clip-poster.jpg"
+            aria-label="Kurzfilm: Pivolo nimmt einen Bereich auf, markiert ihn und gibt ihn weiter"
+          >
+            <source src="video/pivolo-clip.mp4" type="video/mp4" />
+            Dein Browser kann das Video nicht abspielen.
+            <a href="video/pivolo-clip.mp4">Video als MP4 laden</a>.
+          </video>
+        </figure>
+      </section>
       <section class="ds-section" id="anleitung">
         <div class="ds-section-head">
           <span>02</span>
@@ -282,6 +290,32 @@
           im Handbuch. macOS und Windows unterscheiden sich bei Berechtigungen
           und Tastenkürzeln.
         </p>
+        <div class="ds-features ds-features--grid">
+          <div class="ds-feature">
+            <b>01</b>
+            <h3>Pivolo laden</h3>
+            <p>
+              DMG bzw. Setup von dieser Seite laden, App in den Programme-Ordner
+              ziehen.
+            </p>
+          </div>
+          <div class="ds-feature">
+            <b>02</b>
+            <h3>Freigaben geben</h3>
+            <p>
+              macOS: die Bildschirmaufnahme einmal erlauben. Unter Windows:
+              nichts zu tun.
+            </p>
+          </div>
+          <div class="ds-feature">
+            <b>03</b>
+            <h3><kbd>⇧⌘2</kbd> drücken</h3>
+            <p>
+              Bereich ziehen, markieren, <kbd>Esc</kbd> – das Bild liegt in der
+              Zwischenablage.
+            </p>
+          </div>
+        </div>
         <div class="ds-actions">
           <a class="ds-btn" href="anleitung.html">Zum vollständigen Handbuch</a>
         </div>
@@ -484,10 +518,6 @@
         </div>
         <p class="ds-meta">
           macOS 14 oder neuer (Apple-Chip und Intel) · Windows 10 und 11
-        </p>
-        <p class="ds-meta">
-          Unter Windows heißen die Kürzel Strg statt ⌘ – z. B. Strg+Umschalt+2
-          für einen Bereich.
         </p>
       </section>
     </main>
