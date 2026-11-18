@@ -4,7 +4,7 @@ Die Produktseite liegt in `website/` (statisches HTML/CSS, keine externen Abhän
 
 ```
 Release mit DMG  ─┐
-Push auf website/ ├─► GitHub Actions ─► ghcr.io/jaschaaon/shot-villa-web:latest ─► Container ─► Reverse Proxy
+Push auf website/ ├─► GitHub Actions ─► ghcr.io/jaschaaon/pivolo-web:latest ─► Container ─► Reverse Proxy
 ```
 
 ## Neue Version veröffentlichen
@@ -16,12 +16,12 @@ Alles baut GitHub Actions ([`release.yml`](../.github/workflows/release.yml)); e
    ```bash
    git tag v0.3.3 && git push origin v0.3.3
    ```
-3. Der Workflow legt das Release an, baut das universelle macOS-DMG und den Windows-Installer, hängt beides samt signierten Update-Paketen (`*.app.tar.gz`, `*-setup.exe` mit `.sig`) an, erzeugt `latest.json` und stößt den Website-Build an. Das Image `ghcr.io/jaschaaon/shot-villa-web:latest` enthält danach die neuen Downloads.
+3. Der Workflow legt das Release an, baut das universelle macOS-DMG und den Windows-Installer, hängt beides samt signierten Update-Paketen (`*.app.tar.gz`, `*-setup.exe` mit `.sig`) an, erzeugt `latest.json` und stößt den Website-Build an. Das Image `ghcr.io/jaschaaon/pivolo-web:latest` enthält danach die neuen Downloads.
 4. Auf dem Server das neue Image ziehen und den Container neu starten (z. B. „Update“ in der Container-Verwaltung).
 
 ## Updates in der App
 
-Installierte Apps holen neue Versionen selbst. Sie rufen dazu `https://github.com/JaschaaON/shot-villa/releases/latest/download/latest.json` ab, eine statische Datei am neuesten Release. Das ist kein API-Aufruf und unterliegt nicht dem Abruflimit der GitHub-API (60 Abrufe pro Stunde ohne Anmeldung). Pakete prüft die App mit dem öffentlichen Schlüssel aus `tauri.conf.json` (`plugins.updater.pubkey`); `requireSignedVersion` verhindert, dass ein älteres, gültig signiertes Paket als neues ausgegeben wird.
+Installierte Apps holen neue Versionen selbst. Sie rufen dazu `https://github.com/JaschaaON/pivolo/releases/latest/download/latest.json` ab, eine statische Datei am neuesten Release. Das ist kein API-Aufruf und unterliegt nicht dem Abruflimit der GitHub-API (60 Abrufe pro Stunde ohne Anmeldung). Pakete prüft die App mit dem öffentlichen Schlüssel aus `tauri.conf.json` (`plugins.updater.pubkey`); `requireSignedVersion` verhindert, dass ein älteres, gültig signiertes Paket als neues ausgegeben wird.
 
 ### Umbenennung auf Pivolo
 
@@ -48,7 +48,7 @@ Version 0.3.8 ist als Migrationsupdate für vorhandene Installationen vorgesehen
 
 ## Einmalige Einrichtung
 
-1. **Image-Zugriff:** Ist das Paket `shot-villa-web` in der GitHub Container Registry privat, `ghcr.io` mit einem GitHub-Token (Recht `read:packages`) in der Container-Verwaltung hinterlegen – oder unter *Packages → shot-villa-web → Package settings* die Sichtbarkeit auf *Public* stellen.
+1. **Image-Zugriff:** Ist das Paket `pivolo-web` in der GitHub Container Registry privat, `ghcr.io` mit einem GitHub-Token (Recht `read:packages`) in der Container-Verwaltung hinterlegen – oder unter *Packages → pivolo-web → Package settings* die Sichtbarkeit auf *Public* stellen.
 2. **Stack anlegen:** [`deploy/compose.yaml`](../deploy/compose.yaml) als Compose-Stack starten (z. B. über die GUI der Container-Verwaltung). Der Container lauscht nur auf `127.0.0.1:8098`.
 3. **Route:** Einen Reverse Proxy (mit TLS) für die Domain auf Port `8098` des Servers zeigen lassen.
 

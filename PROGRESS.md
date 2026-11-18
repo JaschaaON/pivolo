@@ -1,4 +1,4 @@
-# PROGRESS – Shot-VILLA
+# PROGRESS – Pivolo
 
 Legende: ☐ offen · ◐ implementiert, Tests grün, Praxistest offen · ☑ fertig (implementiert, getestet, im Betrieb geprüft)
 
@@ -81,7 +81,7 @@ Noch nicht in der App geprüft: Sichern unter, Drag & Drop ins Editorfenster, �
 
 ## 0.2.0 – Umbenennung und neues Design (2026-10-15)
 
-- Name aus markenrechtlichen Gründen: **Shot-VILLA** (Bundle-Kennung `de.villalife.shot-villa`, Programmdatei `shot-villa`, Repo `JaschaaON/shot-villa`, Website shot-villa.villalife.de, Container-Image `shot-villa-web`).
+- Name: sichtbar **Pivolo** (Repo `JaschaaON/pivolo`, Website pivolo.villalife.de, Container-Image `pivolo-web`). Intern bleiben Bundle-Kennung `de.villalife.shot-villa`, Programmdatei `shot-villa` (Cargo) und Signaturidentität „Shot-VILLA Signing“ zur Wahrung der Freigaben und Updater-Kette stabil (2026-11-18 aktualisiert; GitHub leitet alte Repo-Adressen weiter).
 - Einstellungen der früheren Installation werden beim ersten Start übernommen (Test vorhanden), ein eingeschalteter Autostart wird für die neue App neu angemeldet.
 - Design Silber-Grau: kühle Neutraltöne, Grafit als Akzent, metallische Leisten und Knöpfe, Glas-Meldungen, Steel-Grau für Auswahlrahmen; Hell- und Dunkelmodus. Neues Icon (gebürstetes Silber, Grafit-Sucher) als SVG in `src-tauri/icons/icon.svg`. Website und Screenshots angepasst.
 - Signatur jetzt mit dem selbstsignierten Zertifikat „Shot-VILLA Dev“; die Bildschirmaufnahme muss für die umbenannte App einmal neu erlaubt werden.

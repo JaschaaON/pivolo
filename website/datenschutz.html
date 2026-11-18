@@ -32,16 +32,17 @@
 
       <h2>Kurz gesagt</h2>
       <p>
-        Diese Website setzt keine Cookies, verwendet keine Analyse- oder
-        Tracking-Dienste und lädt keine Inhalte von fremden Servern (keine
-        externen Schriften, Skripte oder Bilder). Ein kleines Skript vom eigenen
-        Server zeichnet nur den animierten Sternenhimmel im Hintergrund; es
-        speichert und überträgt nichts. Gespeichert werden nur die technischen
-        Zugriffsprotokolle des Webservers, wie unten beschrieben. Die App Pivolo
-        selbst verarbeitet Bildschirmfotos ausschließlich auf deinem Gerät. Sie
-        überträgt keine Aufnahmen und keine persönlichen Daten; die einzige
-        Verbindung ist die abschaltbare Suche nach Updates, wie unten
-        beschrieben.
+        Diese Website ist eine statische Seite: Sie setzt keine Cookies,
+        verwendet keine Analyse- oder Tracking-Dienste und lädt nichts von
+        fremden Servern – Schriften, Bilder, Film und die beiden kleinen Skripte
+        kommen alle von diesem Server. Die Skripte zeichnen nur den animierten
+        Sternenhimmel im Hintergrund und vergrößern Bilder an Ort und Stelle;
+        beides läuft allein in deinem Browser und speichert und überträgt
+        nichts. Gespeichert werden nur die technischen Zugriffsprotokolle des
+        Webservers, wie unten beschrieben. Die App Pivolo selbst verarbeitet
+        Bildschirmfotos ausschließlich auf deinem Gerät. Sie überträgt keine
+        Aufnahmen und keine persönlichen Daten; die einzige Verbindung ist die
+        abschaltbare Suche nach Updates, wie unten beschrieben.
       </p>
 
       <h2>Verantwortlicher</h2>
@@ -54,6 +55,36 @@
         >
       </p>
 
+      <h2>Funktionen dieser Website</h2>
+      <ul>
+        <li>
+          <strong>Seiten aufrufen:</strong> Startseite, Anleitung und
+          Datenschutzerklärung sind gewöhnliche Webseiten ohne Formulare und
+          ohne Anmeldung. Was beim Aufruf anfällt, steht unten unter
+          „Zugriffsprotokolle des Webservers“.
+        </li>
+        <li>
+          <strong>Sternenhimmel und Bildvergrößerung:</strong> Die beiden
+          Skripte <code>fx.js</code> (animierter Sternenhimmel, folgt der Maus)
+          und <code>lightbox.js</code> (Bilder zum Vergrößern anklickbar) laufen
+          nur in deinem Browser. Sie setzen keine Cookies, nutzen keinen
+          Browser-Speicher (Local Storage oder ähnliches), erfassen nichts und
+          übertragen nichts.
+        </li>
+        <li>
+          <strong>Film, Bilder und Schriften:</strong> Der Kurzfilm, die
+          Produktbilder und die Schriften liegen auf diesem Server und werden
+          direkt von dort geladen. Es findet kein Abruf bei YouTube oder einem
+          anderen Drittanbieter statt; der Abruf erscheint im Zugriffsprotokoll.
+        </li>
+        <li>
+          <strong>Downloads:</strong> Die Installationsdateien (DMG für macOS,
+          Setup für Windows) liegen als gewöhnliche Dateien auf diesem Server.
+          Der Abruf erscheint im Zugriffsprotokoll; weiter verarbeitet die
+          Website dazu nichts.
+        </li>
+      </ul>
+
       <h2>Zugriffsprotokolle des Webservers</h2>
       <p>
         Bei jedem Aufruf dieser Website und bei jedem Download speichert der
@@ -63,7 +94,8 @@
         <li>IP-Adresse des anfragenden Geräts</li>
         <li>Datum und Uhrzeit des Zugriffs</li>
         <li>
-          aufgerufene Adresse (z. B. Seite oder Download-Datei) und HTTP-Methode
+          aufgerufene Adresse (z. B. Seite, Film oder Download-Datei) und
+          HTTP-Methode
         </li>
         <li>HTTP-Statuscode und übertragene Datenmenge</li>
         <li>
@@ -97,10 +129,11 @@
         <code>latest.json</code> aus dem öffentlichen Repository bei GitHub ab
         (github.com, GitHub Inc., USA). Übertragen werden nur die technisch
         notwendigen Verbindungsdaten, insbesondere deine IP-Adresse; GitHub
-        erfährt weder Aufnahmen noch persönliche Daten. Die Suche lässt sich in
-        den Einstellungen der App unter „Updates“ abschalten. Rechtsgrundlage
-        ist Art. 6 Abs. 1 lit. f DSGVO (Bereitstellung von
-        Sicherheitsaktualisierungen).
+        erfährt weder Aufnahmen noch persönliche Daten. GitHub ist nach dem
+        EU-US Data Privacy Framework zertifiziert, so dass die Übermittlung nach
+        Art. 45 DSGVO zulässig ist. Die Suche lässt sich in den Einstellungen
+        der App unter „Updates“ abschalten. Rechtsgrundlage ist Art. 6 Abs. 1
+        lit. f DSGVO (Bereitstellung von Sicherheitsaktualisierungen).
       </p>
 
       <h2>Hosting</h2>
@@ -135,10 +168,7 @@
     </main>
     <footer class="ds-wrap ds-foot">
       <span>© 2026 Jascha Coenen</span>
-      <span
-        ><a href="./">Startseite</a> ·
-        <a href="impressum.html">Impressum</a></span
-      >
+      <span><a href="./">Startseite</a></span>
     </footer>
     <script src="fx.js" defer></script>
   </body>

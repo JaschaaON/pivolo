@@ -43,4 +43,4 @@ jobs:
           context: .
           file: deploy/Dockerfile
           push: true
-          tags: ghcr.io/jaschaaon/shot-villa-web:latest
+          tags: ghcr.io/jaschaaon/pivolo-web:latest
